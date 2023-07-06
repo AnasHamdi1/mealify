@@ -462,12 +462,12 @@ main .img img:hover {
 .chefs .content li .shape {
   position: relative;
   height: 60px;
-  background-image: url("/imgs/team-shape.svg");
+  background-image: url("./imgs/team-shape.svg");
   margin-top: -58px;
 }
 
 body:has(#mode:checked) .chefs .content li .shape {
-  background-image: url("/imgs/team-shape-dark.svg");
+  background-image: url("./imgs/team-shape-dark.svg");
 }
 
 .chefs .content li .det {
