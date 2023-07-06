@@ -35,6 +35,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  scroll-padding-top: 85.5px;
 }
 
 body {
@@ -96,7 +97,6 @@ button {
 
 .section {
   padding-block: 45px;
-  scroll-margin: 85.5px;
 }
 
 .sec-bg {
@@ -384,6 +384,10 @@ main .img img {
   filter: drop-shadow(4px 4px 9px #000a);
 }
 
+main .img img:hover {
+  animation: shake 400ms infinite;
+}
+
 @media (max-width: 992px) {
   main .container {
     grid-template-columns: 1fr;
@@ -417,6 +421,11 @@ main .img img {
   background-color: var(--header-bg-clr);
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: var(--transition-d);
+}
+
+.chefs .content li:hover {
+  transform: scale(1.05);
 }
 
 .chefs .content li .links {
@@ -427,7 +436,7 @@ main .img img {
   border-radius: 2px;
   background-color: #ffffff4d;
   transform: translateX(calc(48px + 10px));
-  transition: var(--transition-d) var(--transition-d) ease-in-out;
+  transition: var(--transition-d) 200ms;
 }
 
 .chefs .content li:hover .links {
@@ -453,8 +462,8 @@ main .img img {
 .chefs .content li .shape {
   position: relative;
   height: 60px;
-  background-image: url("./imgs/team-shape.svg");
-  margin-top: -60px;
+  background-image: url("/imgs/team-shape.svg");
+  margin-top: -58px;
 }
 
 body:has(#mode:checked) .chefs .content li .shape {
@@ -774,5 +783,42 @@ footer .contact .det li i {
   footer .subscription {
     grid-column: auto;
     grid-row: auto;
+  }
+}
+
+/* animations */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
